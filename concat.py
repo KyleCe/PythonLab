@@ -4,7 +4,7 @@ dataDir = '/Users/elex/Documents/temp/to_process'
 outDir = '/Users/elex/IdeaProjects/Test/output'
 fileName = 'concat_result.txt'
 extend = '.txt'
-nameRange = range(001, 017)
+nameRange = range(006, 50)
 lineRange = ['\n', '\r\n']
 
 out = outDir + '/' + fileName

@@ -8,3 +8,8 @@ str += value
 
 print str
 print len(value)
+
+
+nameRange = range(006, 49)
+
+print 18 in nameRange
