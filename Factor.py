@@ -12,6 +12,8 @@ extend = '.xml'
 lineRange = ['\n', '\r\n']
 head = '\">'
 tail = 'dp</dimen>'
+tailSp = 'sp</dimen>'
+pxStr = 'px'
 scaleFactor = 0.5
 
 out = outDir + '/' + fileName
@@ -24,13 +26,16 @@ def parse_with_factor(line, factor):
     old = line
     if tail in line:
         last_index = line.index(tail)
+    # elif tailSp in line:
+    #     last_index = line.index(tailSp)
     else:
         return line
     first_index = line.index(head)
     old_val = line[first_index + head.__len__(): last_index]
     val = float(old_val) * factor
     val = "{0:.2f}".format(val)
-    return old.replace(old_val, str(val))
+    old_str = line[first_index + head.__len__(): last_index + 2]
+    return old.replace(old_str, str(val) + pxStr)
 
 
 for root, dirs, fileList in os.walk(dataDir):

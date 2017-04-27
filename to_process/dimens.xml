@@ -316,6 +316,7 @@
     <dimen name="dp306">306.0dp</dimen>
     <dimen name="dp320">320.0dp</dimen>
     <dimen name="dp325">325.0dp</dimen>
+    <dimen name="dp330">330.0dp</dimen>
     <dimen name="dp338">338.0dp</dimen>
     <dimen name="dp355">355.0dp</dimen>
     <dimen name="dp360">360.0dp</dimen>
