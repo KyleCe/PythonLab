@@ -5,7 +5,7 @@ to_process_dir = '/Users/elex/Pictures/GC_sources'
 mPicExtent = '.png'
 
 
-def task():
+def move_extent():
     for root, dirs, fileList in os.walk(to_process_dir):
         for f in fileList:
             if f.endswith(mPicExtent):
@@ -13,4 +13,13 @@ def task():
                 os.rename(f_with_path, f_with_path[:-mPicExtent.__len__()])
 
 
-task()
+def rename_back():
+    for root, dirs, fileList in os.walk(to_process_dir):
+        for f in fileList:
+            if not f.endswith(mPicExtent):
+                f_with_path = os.path.join(to_process_dir, f)
+                os.rename(f_with_path, f_with_path + mPicExtent)
+
+
+# move_extent()
+rename_back()
