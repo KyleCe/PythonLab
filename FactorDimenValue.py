@@ -14,7 +14,7 @@ head = '\">'
 tail = 'dp</dimen>'
 tailSp = 'sp</dimen>'
 pxStr = 'px'
-scaleFactor = 0.5
+scaleFactor = 0.75
 processSP = False
 
 out = outDir + '/' + fileName
@@ -27,9 +27,9 @@ def parse_with_factor(line, factor):
     old = line
     if tail in line:
         last_index = line.index(tail)
-    elif tailSp in line:
-        if processSP:
-            last_index = line.index(tailSp)
+    # elif tailSp in line:
+    #     if processSP:
+    #         last_index = line.index(tailSp)
     else:
         return line
     first_index = line.index(head)
